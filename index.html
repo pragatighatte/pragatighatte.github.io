@@ -107,6 +107,7 @@
     .platform-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 10px; }
     .platform-card { min-height: 100px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; padding: 16px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; text-align: center; }
     .platform-card img { width: auto; max-width: 120px; height: 30px; object-fit: contain; }
+    .platform-card img { filter: brightness(0) invert(1); }
     .platform-card .platform-wordmark { display: block; color: var(--text); font: 700 15px var(--display); letter-spacing: -.025em; }
     .platform-card span:last-child { color: var(--muted); font: 10px var(--mono); }
     .platform-note { margin: 16px 0 0; color: var(--muted); font-size: 12px; }
@@ -280,11 +281,11 @@
         </div>
         <h3 class="platform-heading">Technology platforms used</h3>
         <div class="platform-grid" aria-label="Technology platforms used in engineering work">
-          <div class="platform-card"><img src="https://cdn.simpleicons.org/nxp/FFFFFF" alt="NXP logo" loading="lazy"><span>NXP Semiconductors</span></div>
-          <div class="platform-card"><img src="https://delivery-p151589-e1582228.adobeaemcloud.com/adobe/assets/urn:aaid:aem:6b147185-5134-4ae1-a46d-4083536681a2/original/as/qualcomm-logo-183x80px-dark.svg" alt="Qualcomm logo" loading="lazy"><span>Qualcomm</span></div>
-          <div class="platform-card"><img src="https://delivery-p151589-e1582228.adobeaemcloud.com/adobe/assets/urn:aaid:aem:feed0bc0-c4d7-4fe5-8ac8-1fb2e2639c00/original/as/intel-logo-183x80px-dark.svg" alt="Intel logo" loading="lazy"><span>Intel</span></div>
-          <div class="platform-card"><img src="https://delivery-p151589-e1582228.adobeaemcloud.com/adobe/assets/urn:aaid:aem:3f2fd0f4-7e15-49a7-848e-08b968bc30f1/original/as/texas-instruments-logo-183x80px-dark.svg" alt="Texas Instruments logo" loading="lazy"><span>Texas Instruments</span></div>
-          <div class="platform-card"><img src="https://delivery-p151589-e1582228.adobeaemcloud.com/adobe/assets/urn:aaid:aem:01538527-b013-4572-b52a-4a55be804f06/original/as/renesas-logo-183x80px-dark.svg" alt="Renesas logo" loading="lazy"><span>Renesas</span></div>
+          <div class="platform-card"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nxp.svg" alt="NXP logo" loading="lazy"><span>NXP Semiconductors</span></div>
+          <div class="platform-card"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/qualcomm.svg" alt="Qualcomm logo" loading="lazy"><span>Qualcomm</span></div>
+          <div class="platform-card"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/intel.svg" alt="Intel logo" loading="lazy"><span>Intel</span></div>
+          <div class="platform-card"><span class="platform-wordmark">Texas Instruments</span><span>Embedded processing</span></div>
+          <div class="platform-card"><span class="platform-wordmark">Renesas</span><span>Embedded platforms</span></div>
           <div class="platform-card"><span class="platform-wordmark">Toradex</span><span>System-on-Modules</span></div>
           <div class="platform-card"><span class="platform-wordmark">SolidRun</span><span>System-on-Modules</span></div>
           <div class="platform-card"><span class="platform-wordmark">Raspberry Pi</span><span>Single-board computers</span></div>
