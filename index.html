@@ -93,6 +93,24 @@
     .profile-frame img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center center; border-radius: 7px; filter: saturate(.78); background: var(--surface-2); }
     .profile-note { margin-top: 13px; display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
     .section { padding: 100px 0; border-bottom: 1px solid var(--line); }
+
+    .experience-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+    .experience-card { display: flex; align-items: center; gap: 22px; min-height: 150px; padding: 25px; background: var(--surface); border: 1px solid var(--line); border-radius: 9px; }
+    .employer-mark { display: grid; place-items: center; flex: 0 0 104px; height: 72px; padding: 10px; border: 1px solid var(--line); border-radius: 7px; background: #f7f8f6; color: #142018; text-align: center; font-family: var(--display); font-weight: 800; line-height: 1.05; letter-spacing: -.04em; }
+    .employer-mark.l4b { font-size: 25px; }
+    .employer-mark.l4b small { display: block; margin-top: 3px; font: 700 9px var(--mono); letter-spacing: .12em; }
+    .employer-mark.hinduja { font-size: 15px; letter-spacing: .02em; }
+    .experience-meta { margin-bottom: 6px; color: var(--accent); font: 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .experience-card h3 { margin: 0 0 5px; font: 650 19px var(--display); }
+    .experience-card p { margin: 0; color: var(--muted); font-size: 13px; }
+    .platform-heading { margin: 46px 0 18px; color: var(--soft); font: 600 15px var(--display); }
+    .platform-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 10px; }
+    .platform-card { min-height: 100px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; padding: 16px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; text-align: center; }
+    .platform-card img { width: auto; max-width: 120px; height: 30px; object-fit: contain; }
+    .platform-card .platform-wordmark { display: block; color: var(--text); font: 700 15px var(--display); letter-spacing: -.025em; }
+    .platform-card span:last-child { color: var(--muted); font: 10px var(--mono); }
+    .platform-note { margin: 16px 0 0; color: var(--muted); font-size: 12px; }
+
     .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 44px; }
     .section-kicker { color: var(--accent); font: 11px var(--mono); text-transform: uppercase; letter-spacing: .14em; margin-bottom: 13px; }
     h2 { margin-bottom: 0; font: 700 clamp(30px,4vw,46px)/1.12 var(--display); letter-spacing: -.05em; }
@@ -160,6 +178,8 @@
       .section-head { display: block; margin-bottom: 30px; }
       .section-intro { margin-top: 16px; }
       .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .experience-grid { grid-template-columns: 1fr; }
+      .platform-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .capabilities, .projects { grid-template-columns: 1fr; }
       .capability { min-height: auto; }
       .project { min-height: 270px; }
@@ -184,7 +204,7 @@
       <a class="brand" href="#home" aria-label="Pragati Ghatte home"><span class="brand-mark">PG</span><span>PRAGATI GHATTE</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
       <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a><a href="#services">Consulting</a><a href="#work">Selected work</a><a href="#approach">Approach</a>
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#services">Consulting</a><a href="#work">Selected work</a><a href="#approach">Approach</a>
       </nav>
       <a class="nav-cta" href="#contact">Discuss a project <span aria-hidden="true">↗</span></a>
     </div>
@@ -231,6 +251,46 @@
             <a class="inline-link" href="https://www.linkedin.com/in/pragati-ghatte-479b62199" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-kicker">02 / Professional experience</div><h2>Engineering experience<br>& platform ecosystems.</h2></div>
+          <p class="section-intro">Employment history is shown separately from the semiconductor and hardware platforms used during engineering work.</p>
+        </div>
+        <div class="experience-grid">
+          <article class="experience-card">
+            <div class="employer-mark l4b" aria-label="L4B Software wordmark">L4B<small>SOFTWARE</small></div>
+            <div>
+              <div class="experience-meta">Employment history</div>
+              <h3>L4B Software</h3>
+              <p>Embedded Linux, BSP integration and platform engineering.</p>
+            </div>
+          </article>
+          <article class="experience-card">
+            <div class="employer-mark hinduja" aria-label="Hinduja Tech wordmark">HINDUJA<br>TECH</div>
+            <div>
+              <div class="experience-meta">Employment history</div>
+              <h3>Hinduja Tech</h3>
+              <p>System engineering.</p>
+            </div>
+          </article>
+        </div>
+        <h3 class="platform-heading">Technology platforms used</h3>
+        <div class="platform-grid" aria-label="Technology platforms used in engineering work">
+          <div class="platform-card"><img src="https://cdn.simpleicons.org/nxp/FFFFFF" alt="NXP logo" loading="lazy"><span>NXP Semiconductors</span></div>
+          <div class="platform-card"><img src="https://delivery-p151589-e1582228.adobeaemcloud.com/adobe/assets/urn:aaid:aem:6b147185-5134-4ae1-a46d-4083536681a2/original/as/qualcomm-logo-183x80px-dark.svg" alt="Qualcomm logo" loading="lazy"><span>Qualcomm</span></div>
+          <div class="platform-card"><img src="https://delivery-p151589-e1582228.adobeaemcloud.com/adobe/assets/urn:aaid:aem:feed0bc0-c4d7-4fe5-8ac8-1fb2e2639c00/original/as/intel-logo-183x80px-dark.svg" alt="Intel logo" loading="lazy"><span>Intel</span></div>
+          <div class="platform-card"><img src="https://delivery-p151589-e1582228.adobeaemcloud.com/adobe/assets/urn:aaid:aem:3f2fd0f4-7e15-49a7-848e-08b968bc30f1/original/as/texas-instruments-logo-183x80px-dark.svg" alt="Texas Instruments logo" loading="lazy"><span>Texas Instruments</span></div>
+          <div class="platform-card"><img src="https://delivery-p151589-e1582228.adobeaemcloud.com/adobe/assets/urn:aaid:aem:01538527-b013-4572-b52a-4a55be804f06/original/as/renesas-logo-183x80px-dark.svg" alt="Renesas logo" loading="lazy"><span>Renesas</span></div>
+          <div class="platform-card"><span class="platform-wordmark">Toradex</span><span>System-on-Modules</span></div>
+          <div class="platform-card"><span class="platform-wordmark">SolidRun</span><span>System-on-Modules</span></div>
+          <div class="platform-card"><span class="platform-wordmark">Raspberry Pi</span><span>Single-board computers</span></div>
+          <div class="platform-card"><span class="platform-wordmark">BeagleBoard</span><span>BeagleBone Black</span></div>
+        </div>
+        <p class="platform-note">Company names and marks identify the technology ecosystems and employers referenced in this work; they do not imply sponsorship, certification or business partnership.</p>
       </div>
     </section>
 
